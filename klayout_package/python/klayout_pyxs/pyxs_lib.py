@@ -22,7 +22,7 @@ import math
 import os
 import re
 
-from klayout_pyxs import HAS_PYA, Box, Edge, Point, Polygon
+from klayout_pyxs import HAS_PYA, HAS_KLAYOUT, Box, Edge, Point, Polygon
 from klayout_pyxs.compat import range, zip
 
 # from importlib import reload
@@ -34,7 +34,7 @@ from klayout_pyxs.compat import range, zip
 #     pass
 
 
-if HAS_PYA:
+if HAS_PYA or HAS_KLAYOUT:
     # Imports for KLayout plugin
     from klayout_pyxs import Action, Application, FileDialog, MessageBox
 
